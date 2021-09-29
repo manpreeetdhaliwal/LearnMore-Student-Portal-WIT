@@ -1,0 +1,17 @@
+.dark {
+    background-color: #F2ECF0;
+  }
+  
+.light {
+    background-color: white;
+}
+
+.card-body h4{
+  font: size 13px;
+  font-weight: bold;
+}
+
+.coursesList{
+  padding-top: 20px;
+  padding-left: 15px;
+}

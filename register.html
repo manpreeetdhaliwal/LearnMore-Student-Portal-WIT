@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnMore Landing Page</title>
+    <!-- <link rel="stylesheet" href="assets/vendors/fontawesome-free/css/all.min.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/register.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    
+</head>
+
+<body>
+    <header class="learnMore-header mainpage-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light learnMore-navbar">
+                <a class="navbar-brand" href="index.html">
+                    <!-- <img src="assets/images/logo.svg" alt="learnMore"> -->
+                    <img src="assets/images/learnMore/LearnMore_logo_transparent.svg" alt="learnMore" width=200px height=110px>
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#app-features">Features</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li> -->
+                    </ul>
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item mr-2 mb-3 mb-lg-0">
+                            <a class="btn btn-secondary" href="register.html">Sign up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-secondary" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-auth">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <section class="auth-wrapper">
+                        <div class="row">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <h2 class="auth-section-title">Create account</h2>
+                                <p class="auth-section-subtitle">Create your account to continue.</p>
+                                <form id="registerForm">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name <sup>*</sup></label>
+                                        <input type="firstName" class="form-control" id="firstName" name="firstName" placeholder="First Name">                                        
+                                            <p class="form-error" id="firstNameError"></p>
+                                          
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name <sup>*</sup></label>
+                                        <input type="lastName" class="form-control" id="lastName" name="lastName" placeholder="Last Name">                                        
+                                            <p class="form-error" id="lastNameError"></p>
+                                          
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email <sup>*</sup></label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">                                        
+                                            <p class="form-error" id="emailError"></p>
+                                          
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password<sup>*</sup></label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                        <p class="form-error" id="passwordError"></p>
+                                        <label class="password-rule" >
+                                            Password should be atleast 8 characters long. It must include one lowercase letter, one uppercase letter, one numeric digit and one special character.
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm Password <sup>*</sup></label>
+                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                                        <p class="form-error" id="confirmPasswordError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="userRole">Select you role <sup>*</sup></label>
+                                        <select class="form-control" name="userRole" id="userRole" required>
+                                            <option selected value="">Select you role</option>
+                                            <option value="teacher">I am a teacher</option>
+                                            <option value="student">I am a student</option>                                            
+                                          </select>
+                                          <p class="form-error" id="userRoleError"></p>
+                                        
+                                    </div>
+                                    <button class="btn btn-primary btn-auth-submit" type="submit" id="btnRegister">Create account</button>
+                                </form>
+                                <p class="mb-0">
+                                    <a href="login.html" class="text-dark font-weight-bold">Already have an acocunt? Sign in</a>
+                                </p>
+                            </div>
+                            <div class="col-md-6 d-flex align-items-center main-page-image">
+                                <!-- <img src="assets/images/Register.png" alt="login" class="img-fluid"> -->
+                                <img src="assets/images/learnMore/student.png" alt="login" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="learnMore-footer text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col -8 col-md-4 text-center">
+                    <a href ="https://www.facebook.com/" target = "_blank">
+                    <img src="assets/images/facebook.svg" alt="facebook" width=50px height=50px></a>
+                </div>
+                <div class="col -8 col-md-4 text-center">
+                    <a href ="https://www.instagram.com/" target = "_blank">
+                    <img src="assets/images/instagram.svg" alt="instagram" width=50px height=50px></a>
+                </div>
+                <div class="col -8 col-md-4 text-center">
+                    <a href ="https://www.twitter.com/" target = "_blank">
+                    <img src="assets/images/twitter.svg" alt="twitter" width=50px height=50px></a>
+                </div>
+            </div>
+            <!-- <div class="row footer-content">
+                <div class="col-xl-6 col-lg-7 col-md-8">
+                    <h2 class="mb-0">Have a question or a feature you really want us to add? write to us.</h2>
+                </div>
+                <div class="col-md-4 col-lg-5 col-xl-6 py-3 py-md-0 d-md-flex align-items-center justify-content-end">
+                    <a href="contact.html" class="btn btn-danger btn-lg">Contact form</a>
+                </div>
+            </div> -->
+            <div class="row footer-widget-area">
+                <div class="row" style="display: flex; justify-content: center">
+                    <!-- <div class="py-3 col-md-12" style="display: flex; justify-content: center">
+                        <img src="assets/images/logo-white.svg" alt="learnMore" style="padding-bottom: 20px">
+                    </div>
+                    <div class="col-md-12" style="display: flex; justify-content: center; padding-bottom: 20px">
+                        <a href="https://apps.apple.com/ca/app/gradey-grade-tracker/id1431015395" target="blank">
+                            <img src="assets/images/apple-app-store-icon.png" style="max-width: 150px" alt="App store">
+                        </a>
+                    </div> -->
+                    <div class="col-md-12" style="display: flex; justify-content: center">
+                    <p>
+                        &copy; LearnMore - All rights reserved.
+                    </p>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="assets/vendors/jquery/jquery.min.js"></script>
+    <script src="assets/vendors/popper.js/popper.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <script src="assets/javascript/firebase.js"></script>
+    <script src="assets/javascript/validateForm.js"></script>
+    <script src="assets/javascript/register.js"></script>
+</body>
+
+</html>

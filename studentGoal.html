@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnMore Goal Course</title>
+    <!-- <link rel="stylesheet" href="assets/vendors/fontawesome-free/css/all.min.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/val.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+<header class="learnMore-header mainpage-header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light learnMore-navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/learnMore/LearnMore_logo_transparent.svg" alt="learnMore" width=200px
+                     height=110px>
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+
+                    <li class="nav-item">
+                        <a class="btn btn-secondary" href="#" id="btnLogout">Sign Out</a>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="page-auth">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-3">
+                <section class="auth-wrapper">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h6 class="auth-section-title1" id="name">Hi </h6>
+                            <p class="auth-section-subtitle" id="course_name"></p>
+                            <form class="card p-3 bg-light">
+                                <div class="form-group">
+                                    <label for="goal_grade">Please set your target grade for the course
+                                        </label>
+                                    <br>
+                                    By setting a goal for a grade, you're creating an expectation for how much to learn.
+                                    <div class="input-group mb-3">   
+                                        <input type="number" class="form-control" id="goal_grade" name="goal_grade"
+                                           placeholder="">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                    <p class="form-error" id="emailError"></p>
+                                </div>
+                                <button class="btn joinButton" type="button" id="submitTargetGrade">
+                                    Submit
+                                </button>
+                                <p class="mb-0">
+                                    <a href="student_dashboard.html" class="font-weight-bold" style="text-decoration: none;">Not now</a>
+                                </p>
+                            </form>
+                        </div>
+                        <!--                        <div class="col-md-6 d-flex align-items-center">-->
+                        <!--                            &lt;!&ndash; <img src="assets/images/login.png" alt="login" class="img-fluid"> &ndash;&gt;-->
+                        <!--                            <img src="assets/images/learnMore/knowledge tree.png" alt="login" class="img-fluid">-->
+                        <!--                        </div>-->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="learnMore-footer text-white">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col -8 col-md-4 text-center">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="assets/images/facebook.svg" alt="facebook" width=50px height=50px></a>
+            </div>
+            <div class="col -8 col-md-4 text-center">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="assets/images/instagram.svg" alt="instagram" width=50px height=50px></a>
+            </div>
+            <div class="col -8 col-md-4 text-center">
+                <a href="https://www.twitter.com/" target="_blank">
+                    <img src="assets/images/twitter.svg" alt="twitter" width=50px height=50px></a>
+            </div>
+        </div>
+
+        <div class="row footer-widget-area">
+            <div class="row" style="display: flex; justify-content: center">
+
+                <p>
+                    &copy; LearnMore - All rights reserved.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+</footer>
+<script src="assets/javascript/firebase.js"></script>
+<script src="assets/javascript/validateForm.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+<script src="assets/javascript/studentGoal.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.form-error{
+    color: red;
+  
+  }
+
+.navbar-background{
+    background: blue;
+    
+}
+
+.white-font{
+    color: white;
+}
+
+.password-rule{
+    font-size:.8rem;
+    color: #989898;
+    font-style: italic;
+}

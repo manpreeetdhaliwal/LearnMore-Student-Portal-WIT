@@ -1,0 +1,35 @@
+.numberRoundGreen {
+    display: inline-block;
+    width: 80px;
+    height:35px;
+    border-radius: 25px;
+    padding: 4px;
+    border: 2px solid #00FF00;
+    color: #00FF00;
+    text-align: center;
+    
+}
+
+.numberRoundRed {
+    display: inline-block;
+    width: 80px;
+    height:35px;
+    border-radius: 25px;
+    padding: 4px;
+    border: 2px solid #FF0000FF;
+    color: #FF0000FF;
+    text-align: center;
+}
+
+
+​
+.block {
+    display: block;
+    margin: 10px 0px;
+}
+
+
+​
+.GreyTableHeader{
+     background-color: #e2dad6;
+}

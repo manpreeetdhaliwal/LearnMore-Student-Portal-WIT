@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Course Registration Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="assets/vendors/fontawesome-free/css/all.min.css"> -->
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script defer src="assets/javascript/firebase.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+
+</head>
+
+<body>
+    <header class="learnMore-header course-registration-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light learnMore-navbar">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/learnMore/LearnMore_logo_transparent.svg" alt="learnMore">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item mr-2 mb-3 mb-lg-0 signOut">
+                            <a class="btn font-weight-bold" id="btnLogout" >Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col margin course_registration_greetings">
+                    <p class="font-weight-bold">Hi,  <span id="userFirstName"></span></span> <span id="userLastName"></span></p>
+                    <p class="font-weight-bold"> Let's get you set up.</p>
+                    <div class="borderBox">
+                        <!-- <h6>Course Code</h6> -->
+                        <h6 class="font-weight-bold">Ask your teacher for the course code then enter it here</h6>
+                        <div>
+                            <div class="form-group btnCen">
+                                 <!-- <label for="courseCode">Ask your teacher for the course code then enter it here</label>
+                                 <br><br> -->
+                                <input type="courseCode" class="form-control" id="CourseCodeInput" name="courseCode">
+
+                            </div>
+                            <div class="btnCen">
+                                <button class="btn font-weight-bold" id="joinButton" type="submit">Join</button>                              
+                            </div>
+                            <a href="student_dashboard.html" class="font-weight-bold" style="text-decoration: none">Not now</a>
+
+                        </div>
+                    </div>
+                    <br>
+                    <p class="font-weight-bold">To sign in with a course code</p>
+                    <p class="spacing">* Use an authorized account</p>
+                    <p>* Use a code with XYZ letters or number, and no spaces or symbols</p>
+                </div>
+                <div class="col"></div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="learnMore-footer text-white">
+        <div class="container">
+
+            <div class="row justify-content-center ">
+                <div class="col -8 col-md-4 text-center">
+                    <a href ="https://www.facebook.com/" target = "_blank">
+                        <span class="iconify" data-icon="akar-icons:facebook-fill" style="color: blue;" data-height="35"></span>                </div>
+                <div class="col -8 col-md-4 text-center">
+                    <a href ="https://www.instagram.com/" target = "_blank">
+                        <span class="iconify" data-icon="entypo-social:instagram-with-circle" style="color: blue;" data-height="35"></span>
+                    </div>
+                <div class="col -8 col-md-4 text-center">
+                    <a href ="https://www.twitter.com/" target = "_blank">
+                        <span class="iconify" data-icon="ant-design:twitter-circle-filled" style="color: blue;" data-height="35"></span>                    </div>
+            </div>
+
+            <div class="row footer-widget-area">
+                <div class="row" style="display: flex; justify-content: center">
+
+                    <p style="color: gray;">
+                        &copy; LearnMore - All rights reserved.
+                    </p>
+                </div>
+            </div>
+            
+
+        </div>
+        </div>
+    </footer>
+     <script src="assets/javascript/validateCourseRegistration.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>        
+    <script>$('.navbar-collapse a').click(function(){$(".navbar-collapse").collapse('hide');});</script>
+</body>
+
+</html>
+
+
+
+
+

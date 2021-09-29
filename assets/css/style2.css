@@ -1,0 +1,582 @@
+
+
+/* Course Registration css */
+
+
+.learnMore-header {
+  padding-top: 24px; 
+}
+
+
+header img, header button, header a{
+  margin-top:-15px
+}
+
+.learnMore-header .header-content {
+  padding-top: 85px;
+  padding-bottom: 50px; 
+}
+
+.learnMore-header img{
+  margin-right: 200px;
+}
+
+.learnMore-header .signOut{
+  margin-bottom: 22px;
+  margin-left:400px;
+  padding: 16px 28px; 
+}
+
+.learnMore-header.course-registration-header {
+  /* background-image: url("../images/bg_1@2x.png"), url("../images/Bg_2@2x.png"); */
+  background-image: url("../images/learnMore/header.jpg");
+  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* background-position: left bottom, right top;  */
+  height:170px;
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center
+}
+
+nav img{
+  width:200px;
+  height:120px;
+  margin-left: -10px;
+  
+}
+
+#joinButton{
+  background-color: #e7dbe3;
+  border-color: #f5f6f8;
+  width:200px
+}
+
+
+
+#joinButton:hover{
+  background-color:#cfcdcf;
+  border-color: #d7dbe3
+}
+
+#btnLogout{
+  background-color: #f5f6f8;
+  border-color: #f5f6f8;
+  padding-top: 5px;
+  padding-left: 28px; 
+  padding-right: 28px;
+  text-align: center
+
+}
+
+#btnLogout:hover{
+    background-color: #dfe2e8;
+    border-color: #d7dbe3;
+}
+
+.btn {
+  padding: 16px 20px;
+  line-height: 1;
+  font-weight: 700; 
+}
+
+.course_registration_greetings{
+  padding-top: 120px;
+}
+
+.borderBox {
+  width: 500px;
+  border: 3px solid #dddce0;
+  padding: 20px;
+  margin-top: 5px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+#CourseCodeInput{
+  border: 1px solid gray;
+  width:400px;
+  margin-left: 25px;
+  border-radius: 10px;
+
+}
+
+
+
+.card-title{
+  font-size:13px;
+  /* margin-top: -10px; */
+  /* text-decoration: none; */
+}
+
+.card-text{
+  font-size:13px;
+  font-weight: normal;
+  margin-top: -10px;
+}
+
+
+
+#coursecards h5{
+  margin-left: 5px;
+  font-size: 12px;
+  margin-top: -8px
+}
+
+#coursecards img{
+  border-top-left-radius: 50% ;
+}
+
+.card-img-top{
+  border-top-left-radius:50%;
+}
+
+#coursecards {
+  border-top-left-radius:50%;
+  margin-right: 20px;
+  margin-left: 5px;
+  
+}
+
+.btnCen button{
+  margin-left: 120px;
+}
+
+
+.course_registration_greetings{
+  margin-top: -50px;
+}
+
+.course_registration_greetings p, .course_registration_greetings h6, .course_registration_greetings a{
+  margin-bottom: 5px;
+  margin-left:30px;
+}
+
+
+
+
+.learnMore-footer {
+  padding-top: 50px;
+  margin-top: 100px;
+  background-image: url(../images/learnMore/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  /* background-size: 100%; */
+  /* height: 100px; */
+}
+.learnMore-footer .footer-content {
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.39); 
+}
+
+.learnMore-footer .footer-widget-area {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px; 
+}    
+  
+.learnMore-footer .footer-widget-area p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fefefe; 
+}
+.learnMore-footer .nav-link {
+  font-size: 15px;
+  line-height: 2.33;
+  font-weight: 600;
+  color: #fefefe;
+  padding: 0; 
+}
+.learnMore-footer .social-menu a {
+  display: inline-block;
+  margin-right: 10px; 
+}
+
+/* ---------------------------------------dashboard css-------------------------- */
+
+.mainSection{
+  margin-left: 255px;
+  position: absolute;
+  /* background-color: blue; */
+  top: -15px;
+  /* width: 1046px; */
+  
+}
+
+.assignmentsList{
+  margin-top: 100px ;
+  
+}
+
+
+.mainSection.row{
+  /* display:float; */
+  float: left;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+
+.allCoursesList{
+  width:600px
+}
+.coursesList{
+  /* height: 100%; */
+  width: 1100px;
+  /* position: relative; */
+  /* top: 100px;
+  left:0; */
+  /* background-color: blue; */
+  /* min-height: 1000px; */
+  /* border-right: 3px solid #dddce0; */
+  /* height:1000px; */
+
+
+}
+.column{
+  float: left;
+}
+.rightAside{
+  /* margin-right: -15px; */
+  min-height: 800px;
+  /* width: 400px; */
+  /* position: relative; */
+  top: 100px;
+  padding-top: 150px;
+}
+
+
+
+.legendImage, .legendImage2{
+  margin-left: 180px;
+  float:left;
+  padding-top: 5px;
+}
+
+.legendImage h5, .legendImage2 h5{
+  font-size:13px;
+  font-weight: bold;
+}
+
+.quizLegend1, .assignmentLegend1{
+  width:30px;
+  padding-top: -20px;
+}
+
+
+.quizLegend2, .assignmentLegend2{
+  width:100px;
+  margin-top:5px;
+}
+
+.upcomingTasks h4{
+  font-weight: bold;
+}
+
+.upcomingTasks h4, .upcomingTasksDetails button
+{
+  margin-left: 25px;
+}
+
+.upcomingTasks{
+  padding-top:70px;
+}
+
+
+
+.upcomingTasksDetails button{
+  width:300px;
+  height: 50px;
+  border: none;
+  background-color: 	#FF4500;
+  border-radius: 15px;
+}
+
+.legendImage button{
+  border-radius: 100%;
+  height: 12px;
+  width: 7px;
+  border:none;
+  background-color:#ff0000;
+}
+
+.legendImage2 button{
+  border-radius: 100%;
+  height: 12px;
+  width: 7px;
+  border:none;
+  background-color: #008000;
+}
+
+
+
+body.container-fluid{
+  height:100%;
+}
+
+.courseRegistration{
+  margin-top: 100px;
+  background-color: #e6e4e4;
+  padding: 15px 0px;
+}
+
+.registrationTitle, .courseCodeInput{
+  text-align: center
+}
+
+.courseCodeInput input{
+  height: 30px;
+  /* border-radius: 10px; */
+  background-color:#f7f4f4;
+}
+
+.courseCodeInput input:hover{
+  /* border-radius: 10px; */
+  background-color:#ffffff;
+}
+
+.logoutButton{
+  text-align: center;
+  /* padding:15px 5px; */
+}
+
+
+/* .btn-auth-submit {
+  margin-bottom: 22px;
+  padding: 16px 28px;
+  background: #B22222; 
+} */
+/* .btn-primary {
+  color: #0a0a0a;
+  background-color: #fe3f3e;
+  border-color: #05379B; 
+} */
+/* .btn-danger:hover {
+  color: #000000;
+  background-color:#ff0505 ;
+  border-color: darkgrey; 
+} */
+
+
+
+.logoutButton button{
+  height: 40px;
+  border-radius: 5px;
+  background-color: #FF0000 ;
+  border-color: #05379B;
+  color: #0a0a0a;
+  padding-top:10px;
+}
+
+.courseCodeInput button{
+  height: 35px;
+  border-radius: 5px;
+  background-color: #c4c4c4;
+  color: 0a0a0a;
+  font-weight: bold
+}
+
+.courseCodeInput button:hover{
+  color: #ffffff;
+  background-color:#666464;;
+  border-color: darkgrey;
+  font-weight: bold;
+}
+
+.navigationItems{
+  padding-top: 25px;
+  padding-left: 15px;
+  
+
+}
+
+
+.homeLink, .coursesLink, .gradesLink, .assignmentsLink, .joinAClassLink{
+  padding-left:40px;
+  padding-top: 15px;
+  margin-bottom: -15px;
+
+  width:240px;
+  height:60px;
+}
+
+.sidenav{
+    /* height:1000px; */
+    width: 240px;
+    /* position:absolute; */
+    margin-top: -1px;
+    margin-left: -15px;
+    min-height: 660px;
+    top: 1px;
+    left: 0;
+    bottom: 0;
+    background-image:linear-gradient(to bottom, #f054c9, #ffffff);
+
+}
+
+
+
+nav .greetings{
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+
+.sidenav a {
+    padding: 5px 8px 0px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #2e2121;
+    display: block;
+    font-weight: bold;
+}
+  
+.sidenav a:hover {
+    color:#1a1a99;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+/* .homeName-active{
+    color:#1a1a99;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.homeIcon-active{
+  color: #1a1a99;
+} */
+
+/* .sidenav a:hover * .row .iconify{
+  height: 100em;
+} */
+
+#assignmentIcon{
+    margin-top: 30px;
+    padding-left: 15px;
+}
+
+
+
+.myCourse, .dashboardInfo, .myAssignment{
+  padding-left: 27px;
+  padding-top: 90px;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.courseDisplay button{
+  width:178px;
+  height:155px;
+  margin-top: 22px;
+  margin-right: 25px;
+  border-radius: 8px;
+  border-color: #092086;
+}
+
+.courseDisplay{
+margin-left: 38px;
+
+}
+
+
+
+.seeMoreCourses{
+margin-left:465px;
+}
+
+.task{
+padding-top: 30px;
+}
+
+.upcomingToDoList{ 
+padding-left:5px;
+}
+
+hr.underline{
+  border-top: 3px dotted #fca9d0;
+  margin-left: -10px;
+  margin-top:-5px;
+}
+
+.dashboardInfo{
+  font-weight: bold;
+  padding-top:10px ;
+}
+
+.topSpacing{
+margin-top: -10px;
+}
+
+
+i {
+background: #BAE7AE;
+/* font-size: 25px; */
+text-align: center;
+margin-right: 0px;
+border-radius:50%;
+display:inline-block;
+padding:12px;
+}
+
+#assignmentTitle{
+padding: 15px 0px 10px 20px;
+}
+
+#assignmentTitle h5{
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+#assignmentDueDate{
+    padding: 17px 0px 10px 20px;
+    margin-left: 10px;
+}
+
+
+#assignmentDueDate h6{
+  font-style: italic ;
+  font-weight: 8px;
+  font-weight:500;
+  padding-bottom:15px ;
+}
+
+
+
+#courseName {
+  font-size: 18px;
+  color:black;
+  font-weight: bold;
+  padding-top:15px
+}
+
+.assignmentview{
+  margin-left: 255px;
+  position: absolute;
+  top: -15px;
+
+}
+
+.assignmentLists li{
+  font-size:17px
+}
+
+
+ul .assignmentType{
+  padding-top: 5px;
+  color:black;
+  text-decoration:none;
+}
+
+ul .duedate{
+  font-style: italic;
+  color:black;
+  text-decoration: none;
+}

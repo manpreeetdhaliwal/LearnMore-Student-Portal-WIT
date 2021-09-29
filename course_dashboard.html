@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Course Dashboard Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="assets/css/style3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"crossorigin="anonymous">
+
+
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="assets/javascript/firebase.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- <main> -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="sidenav">                
+                <div class="sidemenuLogo">        
+                    <a class="navbar-brand" href="student_dashboard.html">
+                        <img src="assets/images/learnMore/LearnMore_logo_transparent.svg" alt="learnMore" width=180px height=130px>
+                    </a>
+                </div>
+                <div>    
+                    <h4 class='greetings'>Hi  <span id="studentName"></span></span> <span id="studentName_1"></span></h4> 
+                </div>
+                <div class= 'navigationItems'>
+                <div class= "row homeLink">
+                    <div class="column homeIcon">
+                        <span class="iconify" data-icon="clarity:home-solid" data-height="25"></span>
+                    </div>
+                    <div class="column homeName">
+                        <a href="student_dashboard.html">Dashboard</a>
+                    </div>
+                </div>
+                <br>
+                <div class= "row coursesLink" style="background-color:#a73b8c" >
+                    <div class="column coursesIcon">
+                        <span class="iconify" data-icon="icomoon-free:books" data-height="25"></span>
+                    </div>
+                    <div class="column coursesName">
+                        <a href="courses.html">Courses</a>
+                    </div>
+                </div>
+                <br>
+                <div class= "row gradesLink" >
+                    <div class="column gradesIcon">
+                        <span class="iconify" data-icon="bi:check-circle-fill" data-height="25"></span> 
+                    </div>
+                    <div class="column gradesName">
+                        <a href="grades.html">Grades</a>
+                    </div>
+                </div>
+                <br>
+                <div class= "row assignmentsLink">
+                    <div class="column assignmentsIcon">
+                        <span class="iconify" data-icon="healthicons:i-exam-multiple-choice" data-height="25"></span>
+                    </div>
+                    <div class="column assignmentsName">
+                        <a href="upcomingAssignmentPage.html">Assignment</a>
+                    </div>
+                </div>
+                <br>
+                <div class= "row joinAClassLink">
+                    <div class="column joinAClassIcon">
+                        <span class="iconify" data-icon="carbon:add-filled" data-height="25"></span>
+                    </div>
+                    <div class="column joinAClassName">
+                        <a href="course_registration.html">Join a class</a>
+                    </div>
+                </div>
+                </div>
+                <br>
+                <!-- <div class="courseRegistration">
+                    <div class="registrationTitle">
+                        <h4> Enroll in a course:</h4>
+                    </div>
+                    <form  class="courseCodeInput">
+                        <input id="courseCodeRegister" placeholder="Course Code">
+                        <br>
+                        <br>
+                        <button type="button"  id="btnRegisterCourse">Join a class</button>                                                              
+                    </form>
+                </div>  -->
+                <br>                
+                <div class="logoutButton">
+                    <button class="btn font-weight-bold" type="submit" id="btnLogout">Sign out</button>            
+                </div>                       
+                 
+            </nav>
+
+                <!-- </div> -->
+            <main class=" col col-lg-8 align-self-start margin_1 position">
+                <div class="row">
+                    <div class="col">
+                        <div class='coursesList'>
+                            <h4 class="" id="courseName"></h4>                                    
+                            <h6 id="course_id"></h6>
+                            <h6 class = "mb-3"id="courseTerm"></h6>
+                            <hr class="line">
+                            <h5>Teacher(s) Details:</h5>
+                            <div class="mb-6 mt-6" id='teacherDetails'>
+                            </div>
+                            <hr class="line" >
+                            <h5>Course Topics:</h5>
+                            <ul>
+                                <li class="mb-3" id='courseTopics'></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Assignment & Quiz Scores:</h5>
+                            <ul>
+                                <li class="mb-3" id='assignmentScoring'></li                            </ul>                                    
+                        </div>
+                        <h6><a href="upcomingAssignmentPage.html">Upcoming Assignments</a></h6>
+                    </div>
+                    <div class="col">
+                        <canvas id="performanceChart" style="width:300px;max-width:600px"></canvas>
+                        <!-- <div id="performanceChart" style="height: 370px; width: 100;"></div> -->
+                        <!-- <div class="col borderBox3 margin_4 rightAside" id="performanceChart"> -->
+                        <!-- <a href="#">Set or upgrade your target grade</a> -->
+                    </div>
+                </div>
+            </main>
+        
+        <!-- <script src="assets/javascript/invalidCoursePage.js"></script> -->
+        <script src="assets/javascript/course_dashboard.js"></script>
+        <!-- <script src="assets/javascript/studentDashboard.js"></script> -->
+        <script src="assets/javascript/validateForm.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="assets/javascript/navigation.js"></script>
+
+
+
+</body>
+</body>
+
+</html>

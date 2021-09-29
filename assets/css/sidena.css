@@ -1,0 +1,420 @@
+
+
+
+/* ---------------------------------------dashboard css-------------------------- */
+
+.mainSection{
+  margin-left: 255px;
+  position: absolute;
+  /* background-color: blue; */
+  top: -15px;
+  /* width: 1046px; */
+  
+}
+
+.mainSection.row{
+  /* display:float; */
+  float: left;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+.coursesList{
+  /* height: 100%; */
+  width: 800px;
+  /* position: relative; */
+  /* top: 100px;
+  left:0; */
+  /* background-color: blue; */
+  /* min-height: 1000px; */
+  /* border-right: 3px solid #dddce0; */
+  /* height:1000px; */
+
+
+}
+
+.column{
+    float: left;
+}
+
+/* -------------------------------------------RIGHT column-------------------- */
+
+/* -- whole right column */
+.rightAside{
+  /* margin-right: -15px; */
+  min-height: 800px;
+  width: 300px;
+  /* position: relative; */
+  top: -200px;
+  right:0px; 
+ background-image:linear-gradient(to bottom, #ffe6ef, #ffffff);
+
+  /* background-color: rgb(158, 59, 59); */
+  /* box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.2); */
+  /* min-width: inherit; */
+  /* background-color:#fffafd; */
+}
+
+
+/* --calendar legends */
+.legendImage, .legendImage2{
+    margin-left: 180px;
+    float:left;
+    padding-top: 5px;
+}
+  
+.legendImage h5, .legendImage2 h5{
+    font-size:13px;
+    font-weight: bold;
+}
+  
+.quizLegend1, .assignmentLegend1{
+    width:30px;
+    padding-top: -20px;
+}
+  
+  
+.quizLegend2, .assignmentLegend2{
+    width:100px;
+    margin-top:5px;
+}
+
+.legendImage button{
+    border-radius: 100%;
+    height: 12px;
+    width: 7px;
+    border:none;
+    background-color:red;
+}
+  
+.legendImage2 button{
+    border-radius: 100%;
+    height: 12px;
+    width: 7px;
+    border:none;
+    background-color: green;
+}
+
+
+/* --upcoming tasks (WORK IN PROGRESS/INCOMPELETE AT THE MOMENT */
+.upcomingTasks h2, .upcomingTasksDetails button
+{
+  margin-left: 25px;
+}
+
+
+.upcomingTasks h4{
+    font-weight: bold;
+}
+
+.upcomingTasks{
+  padding-top:150px;
+}
+
+.upcomingTasksDetails button{
+    width:250px;
+    height: 40px;
+    border: none;
+    background-color: green;
+    border-radius: 15px;
+  }
+  
+
+
+
+
+ /* ------------------------SIDENAVIGATION */
+nav img{
+    width:200px;
+    height:150px;
+    margin-left: -10px;    
+}
+  
+.btn {
+    padding: 16px 20px;
+    line-height: 1;
+    font-weight: 700; 
+}
+  
+.course_registration_greetings{
+    padding-top: 150px;
+}
+
+.homeLink, .coursesLink, .gradesLink, .joinAClassLink, .assignmentsLink{
+  padding-left:50px;
+}
+
+.homeLink{
+  padding-top: 25px;
+}
+
+.coursesLink, .gradesLink, .assignmentsLink, .joinAClassLink{
+  padding-top: 5px;
+}
+
+
+
+
+
+body.container-fluid{
+  height:100%;
+}
+
+
+
+.registrationTitle, .courseCodeInput{
+  text-align: center
+}
+
+.courseCodeInput input{
+  height: 30px;
+  /* border-radius: 10px; */
+  background-color:#f7f4f4;
+}
+
+.courseCodeInput input:hover{
+  /* border-radius: 10px; */
+  background-color:#ffffff;
+}
+
+.logoutButton{
+  text-align: center;
+  padding:15px 0px;
+}
+
+
+/* .btn-auth-submit {
+  margin-bottom: 22px;
+  padding: 16px 28px;
+  background: #B22222; 
+} */
+/* .btn-primary {
+  color: #0a0a0a;
+  background-color: #fe3f3e;
+  border-color: #05379B; 
+} */
+.btn-danger:hover {
+  color: #000000;
+  background-color:#ff0505 ;
+  border-color: darkgrey; 
+}
+
+
+
+
+.logoutButton button{
+  height: 40px;
+  border-radius: 5px;
+  background-color: #FF0000 ;
+  border-color: #05379B;
+  color: #0a0a0a;
+  padding-top:10px;
+}
+
+.courseCodeInput button{
+  height: 35px;
+  border-radius: 5px;
+  background-color: #c4c4c4;
+  color: 0a0a0a;
+  font-weight: bold
+}
+
+.courseCodeInput button:hover{
+  color: #ffffff;
+  background-color:#666464;;
+  border-color: darkgrey;
+  font-weight: bold;
+}
+
+
+
+.sidenav{
+    /* height:1000px; */
+    width: 240px;
+    /* position:absolute; */
+    margin-top: -1px;
+    margin-left: -15px;
+    min-height: 800px;
+    top: 1px;
+    left: 0;
+    bottom: 0;
+    background-image:linear-gradient(to bottom, #fa318f, #ffffff);
+    /* background-color: #fd90fd; */
+
+    /* transition: 0.5s; */
+}
+
+
+
+nav .greetings{
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+
+.sidenav a {
+    padding: 10px 8px 0px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #0a0a0a;
+    display: block;
+    font-weight: bold;
+}
+  
+.sidenav a:hover {
+    /* color: #830b0b; */
+    color:#1606ee;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.sidenav a:hover * .row .iconify{
+  height: 100em;
+}
+
+.bookIcon, .statusIcon{
+    margin-top: 40px;
+}
+
+.myCourse{
+  padding-left: 27px;
+  padding-top: 90px;
+  font-weight: bold;
+}
+
+.courseDisplay button{
+  width:178px;
+  height:155px;
+  margin-top: 22px;
+  margin-right: 25px;
+  border-radius: 8px;
+  border-color: #092086;
+}
+
+.courseDisplay{
+margin-left: 38px;
+
+}
+
+/* .separator1{
+border-top: 3px solid #dddce0;
+padding-top: 20px;
+margin-top: -10px;
+} */
+
+
+
+
+/* ................CALENDAR */
+.wrapper {
+  background-color: #F2ECF0;
+  /* width: 300px;
+  height: 100vh; */
+  /* display: flex; */
+  /* padding-left: 30px; */
+  width: 250px;
+  margin-top: 100px;
+  margin-left: 25px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.calendar{
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+.month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height:60px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  /* margin-top:100px; */
+  /* padding: 40px 30px; */
+  text-align: center;
+  background-color: #C4C4C4;
+  color: rgb(22, 22, 22);
+}
+
+.weekdays {
+  background-color: #d8d6d6;
+  color: rgb(10, 10, 10);
+  padding: 10px 10px;
+  display: flex;
+
+  /* margin-top: 100px; */
+}
+
+.days {
+  font-size:13px;
+  font-weight: normal;
+  padding: 2px 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  
+}
+
+.weekdays div,
+.days div {
+  text-align: center;
+  width: 14.28%;
+}
+
+.days div {
+  padding: 3px 0;
+  margin-bottom: 10px;
+  transition: all 0.4s; 
+}
+
+
+.prev_date {
+  color: #999;
+}
+
+.today {
+  background-color: #C4C4C4;
+  color:black;
+}
+
+.days div:hover {
+  cursor: pointer;
+  background-color: #dfe6e9
+}
+
+.prev,
+.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  padding: 5px;
+}
+
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#month {
+  font-size: 18px;
+  font-weight: 500;
+} 

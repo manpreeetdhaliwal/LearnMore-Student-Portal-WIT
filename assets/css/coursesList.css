@@ -1,0 +1,273 @@
+.coursesList{
+    /* height: 100%; */
+    width: 690px;
+    position: relative;
+    top: -80px;
+    left:0;
+    background-color: blue;
+}
+
+.coursesList{
+    /* height: 100%; */
+    width: 690px;
+    position: relative;
+    top: -80px;
+    left:0;
+    background-color: blue;
+  }
+.bookIcon, .statusIcon{
+  margin-top: 40px;
+}
+.myCourse{
+    padding-left: 27px;
+    padding-top: 112px;
+  }
+
+.courseDisplay button{
+    width:178px;
+    height:155px;
+    margin-top: 22px;
+    margin-right: 25px;
+    border-radius: 8px;
+    border-color: #092086;
+}
+
+.courseDisplay{
+  margin-left: 38px;
+
+}
+
+.separator1{
+  border-top: 3px solid #dddce0;
+  padding-top: 20px;
+  margin-top: -10px;
+}
+
+.separator2{
+  border-top: 3px solid #dddce0;
+  padding-top: 20px;
+  margin-top: 150px;
+}
+
+.separator3{
+  border-top: 3px solid #dddce0;
+  padding-top: 20px;
+  margin-top: 250px;
+}
+.seeMoreCourses{
+  margin-left:465px;
+}
+
+.task{
+  padding-top: 30px;
+}
+.dashboardInfo, .upcomingToDoList{ 
+  padding-left: 35px;
+}
+
+.topSpacing{
+  margin-top: -10px;
+}
+
+
+i {
+  background: #BAE7AE;
+  /* font-size: 25px; */
+  text-align: center;
+  margin-right: 0px;
+  border-radius:50%;
+  display:inline-block;
+  padding:12px;
+}
+
+.eachCourseToDoDetails{
+  float: left;
+  padding: 0px 35px 10px 0px;
+}
+
+.left {
+  width: 25%;
+}
+
+.teacherInfo{
+  padding-left: 70px;
+}
+.middle {
+  width: 75%;
+}
+.statusButton{
+  height: 50px;
+  width: 135px;
+  border:none;
+  border-radius: 50px;
+  background: #31A314;
+  /* display:inline-block; */
+  padding:10px;
+  font-weight: bold;
+  font-size: 15px; 
+  text-align: center;
+
+
+}
+.right{
+  width:25%;
+} 
+
+
+
+ul {
+  list-style-type: none;
+}
+
+
+/* 
+* {
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+.rightAside{
+  margin-left: 995px;
+  /* height: 1000px; */
+  width: 351px;
+  position: relative;
+  top: -1126px;
+  left:0;
+  border-left: 3px solid #dddce0;
+  background-color: rgb(158, 59, 59);
+  /* box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.2); */
+}
+
+
+.wrapper {
+  /* background-color: #dfe6e9; */
+  /* width: 300px;
+  height: 100vh; */
+  /* display: flex; */
+  /* padding-left: 30px; */
+  width: 300px;
+}
+
+
+/* .calendar{
+  width:300px;
+
+} */
+
+table{
+  /* border:1px solid rgb(15, 15, 15); */
+  border-collapse: collapse;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+table tr, table th, table td{
+  border: 1px solid rgb(19, 18, 18);
+
+}
+tbody{
+  border: 1px solid rgb(15, 15, 15);
+
+}
+
+.month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height:40px;
+  /* margin-top:100px; */
+  /* padding: 40px 30px; */
+  text-align: center;
+  /* background-color: #2ecc71; */
+  color: rgb(22, 22, 22);
+}
+
+.weekdays {
+  /* background-color: #27ae60; */
+  color: rgb(10, 10, 10);
+  padding: 7px 0;
+  display: flex;
+
+  /* margin-top: 100px; */
+}
+.th{
+  border: 1px solid rgb(19, 18, 18);
+
+}
+.days {
+  font-size:15px;
+  font-weight: normal;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgb(19, 18, 18);
+
+  
+}
+
+.weekdays th,
+.days div {
+  text-align: center;
+  width: 14.28%;
+}
+
+.days div {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  transition: all 0.4s;
+  
+  
+  
+  
+}
+
+
+.prev_date {
+  color: #999;
+}
+
+.today {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.days div:hover {
+  cursor: pointer;
+  background-color: #dfe6e9
+}
+
+.prev,
+.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#month {
+  font-size: 18px;
+  font-weight: 500;
+} 
+
+/* .sidenavbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap; }
+    .navbar-brand:hover, .navbar-brand:focus {
+      text-decoration: none; }  */

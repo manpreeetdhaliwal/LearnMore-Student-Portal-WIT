@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnMore Assignment Page</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"crossorigin="anonymous">
+
+
+    
+</head>
+
+<body>
+    <div class="container-fluid" >
+        
+    <!-- <Side Navigation> -->
+        <nav class="sidenav">
+            <div class="sidemenuLogo">        
+                <a class="navbar-brand" href="student_dashboard.html">
+                    <img src="assets/images/learnMore/LearnMore_logo_transparent.svg" alt="learnMore" width=180px height=130px>
+                </a>
+            </div>
+            <div>    
+                <h4 class='greetings'>Hi  <span id="userFirstName"></span></span> <span id="userLastName"></span></h4> 
+            </div>
+            <div class= 'navigationItems'>
+            <div class= "row homeLink">
+                <div class="column homeIcon">
+                    <span class="iconify" data-icon="clarity:home-solid" data-height="25"></span>
+                </div>
+                <div class="column homeName">
+                    <a href="student_dashboard.html">Dashboard</a>
+                </div>
+            </div>
+            <br>
+            <div class= "row coursesLink"  >
+                <div class="column coursesIcon">
+                    <span class="iconify" data-icon="icomoon-free:books" data-height="25"></span>
+                </div>
+                <div class="column coursesName">
+                    <a href="courses.html">Courses</a>
+                </div>
+            </div>
+            <br>
+            <div class= "row gradesLink" >
+                <div class="column gradesIcon">
+                    <span class="iconify" data-icon="bi:check-circle-fill" data-height="25"></span> 
+                </div>
+                <div class="column gradesName">
+                    <a href="grades.html">Grades</a>
+                </div>
+            </div>
+            <br>
+            <div class= "row assignmentsLink" style="background-color:#a73b8c">
+                <div class="column assignmentsIcon">
+                    <span class="iconify" data-icon="healthicons:i-exam-multiple-choice" data-height="25"></span>
+                </div>
+                <div class="column assignmentsName">
+                    <a href="#">Assignment</a>
+                </div>
+            </div>
+            <br>
+            <div class= "row joinAClassLink">
+                <div class="column joinAClassIcon">
+                    <span class="iconify" data-icon="carbon:add-filled" data-height="25"></span>
+                </div>
+                <div class="column joinAClassName">
+                    <a href="course_registration.html">Join a class</a>
+                </div>
+            </div>
+            </div>
+            <br>
+            <!-- <div class="courseRegistration">
+                <div class="registrationTitle">
+                    <h4> Enroll in a course:</h4>
+                </div>
+                <form  class="courseCodeInput">
+                    <input id="courseCodeRegister" placeholder="Course Code">
+                    <br>
+                    <br>
+                    <button type="button"  id="btnRegisterCourse">Join a class</button>                                                              
+                </form>
+            </div>  -->
+            <br>                
+            <div class="logoutButton">
+                <button class="btn font-weight-bold" type="submit" id="btnLogout">Sign out</button>            
+            </div>                       
+             
+        </nav>
+ 
+        <main class="mainSection">
+            <div class="row justify-content-start">
+                <div class="column col-6">
+                    <div class="myAssignment">
+                        <div>
+                            <h4>Upcoming Assignments</h4>
+                        </div>
+                        <div id="allCourses">
+                            <!-- <h5 id = "courseName">Python</h5>
+                            <ul class= 'assignmentLists'>
+                                <li>Assignment Title: Loop test</li>
+                                <h6 class="assignmentType">Assignment type: Quiz</h6>
+                                <h6 class= "duedate">Due on: may 18</h6>
+                            </ul> -->
+
+                            <!-- <h5 id = "courseName">Python</h5>
+                            <ul class= 'assignmentLists'>
+                                <li>Assignment Title: Loop test </li>
+                                <h6 class="assignmentType">Assignment type: Quiz</h6>
+                                <h6 class= "duedate">Due on: may 18</h6>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class=" rightAside column col-4 offset-1">
+                    <div class="">
+                        <img src="assets/images/reading_woman.jpg" alt="login" class="img-fluid">
+                    </div>
+            </div>
+        </main>
+            <!-- <section class="assignmentview">
+            <h5>Upcoming Assignments</h5>
+            <div id = "courseName">
+                <b></b></div>       
+                <ul id = "ul">
+                </ul>
+            <div id = "header_1"><b></b></div>
+            <ul id = "ul">
+            </ul> -->
+        <!-- <h1><u>Python</u></h1>
+        <h4>Upcoming Assignments static</h4>
+        
+                
+          
+        <ol>
+            <li>
+                <p>Assignment 3 - Assignment Title</p>
+                <p><i>Due on July 23, 2021 at 11:59 pm</i></p>
+            </li>
+            <li>
+                <p>Assignment 4 - Assignment Title</p>
+                <p><i>Due on July 25, 2021 at 11:59 pm</i></p>
+            </li>
+        </ol>
+        <h4>Python quiz-2</h4>
+        
+        <p><i>Due on July 25, 2021 at 11:59 pm</i></p> -->
+    
+        <!-- </section>    -->
+    <!-- </div> -->
+
+    <script src="assets/javascript/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="assets/javascript/navigation.js"></script>
+    <script src="assets/javascript/upcomingAssignmentPage.js"></script>
+
+</body>
+</html>

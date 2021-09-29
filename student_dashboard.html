@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Student Dashboard</title>
+        <!-- <link rel="stylesheet" href="assets/vendors/fontawesome-free/css/all.min.css"> -->
+        <link rel="stylesheet" href="assets/css/style2.css">
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script> -->
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+        <script defer src="assets/javascript/firebase.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script> -->
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"crossorigin="anonymous">
+        
+        
+    </head>
+
+    <body>
+        <div class="container-fluid" >
+            <!-- <Side Navigation> -->
+            <nav class="sidenav">                
+                <div class="sidemenuLogo">        
+                    <a class="navbar-brand" href="student_dashboard.html">
+                        <img src="assets/images/learnMore/LearnMore_logo_transparent.svg" alt="learnMore" width=180px height=130px>
+                    </a>
+                </div>
+                <div>    
+                    <h4 class='greetings'>Hi  <span id="userFirstName"></span></span> <span id="userLastName"></span></h4> 
+                </div>
+                <div class= 'navigationItems'>
+                <div class= "row homeLink" style="background-color:#a73b8c">
+                    <div class="column homeIcon">
+                        <span class="iconify" data-icon="clarity:home-solid" data-height="25"></span>
+                    </div>
+                    <div class="column homeName">
+                        <a href="#">Dashboard</a>
+                    </div>
+                </div>
+                <br>
+                <div class= "row coursesLink"  >
+                    <div class="column coursesIcon">
+                        <span class="iconify" data-icon="icomoon-free:books" data-height="25"></span>
+                    </div>
+                    <div class="column coursesName">
+                        <a href="courses.html">Courses</a>
+                    </div>
+                </div>
+                <br>
+                <div class= "row gradesLink" >
+                    <div class="column gradesIcon">
+                        <span class="iconify" data-icon="bi:check-circle-fill" data-height="25"></span> 
+                    </div>
+                    <div class="column gradesName">
+                        <a href="grades.html">Grades</a>
+                    </div>
+                </div>
+                <br>
+                <div class= "row assignmentsLink">
+                    <div class="column assignmentsIcon">
+                        <span class="iconify" data-icon="healthicons:i-exam-multiple-choice" data-height="25"></span>
+                    </div>
+                    <div class="column assignmentsName">
+                        <a href="upcomingAssignmentPage.html">Assignment</a>
+                    </div>
+                </div>
+                <br>
+                <div class= "row joinAClassLink">
+                    <div class="column joinAClassIcon">
+                        <span class="iconify" data-icon="carbon:add-filled" data-height="25"></span>
+                    </div>
+                    <div class="column joinAClassName">
+                        <a href="course_registration.html">Join a class</a>
+                    </div>
+                </div>
+                </div>
+                <br>
+                <!-- <div class="courseRegistration">
+                    <div class="registrationTitle">
+                        <h4> Enroll in a course:</h4>
+                    </div>
+                    <form  class="courseCodeInput">
+                        <input id="courseCodeRegister" placeholder="Course Code">
+                        <br>
+                        <br>
+                        <button type="button"  id="btnRegisterCourse">Join a class</button>                                                              
+                    </form>
+                </div>  -->
+                <br>                
+                <div class="logoutButton">
+                    <button class="btn font-weight-bold" type="submit" id="btnLogout">Sign out</button>            
+                </div>                       
+                 
+            </nav>
+            <!-- <Main Section> -->
+            <main class="mainSection">
+                <div class="row justify-content-start">
+                        <div class="column">
+                            <div class='coursesList'>  
+                                <div>                      
+                                    <h4 class="myCourse">My Dashboard</h4>               
+                                </div>
+                                <div class="row" id="coursecards">
+                                    <!-- <div class="card mt-3 ml-5 shadow mb-5 bg-white rounded" style="width: 20opx;">
+                                        <img src="./assets/images/digital-catalog.png" class="card-img-top" alt="course background">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="fas fa-address-book mr-2"></i><b>RET 101</b></h5>
+                                            <p class="card-text">10 Students</p>
+                                            <a href="#" class="btn btn-warning float-right">Go to Course Page</a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <!-- <div id="coursecards">
+                                    <a href="coursedetails.html?course=${courseA.name}" class="myCourseIcon">
+                                        <div class="card mt-3 ml-5 shadow mb-5 bg-white rounded" style="width:200px">
+                                           <img src="./assets/images/digital-catalog.png" class="card-img-top" alt="course background" style="width:150px; height: 150px; border-radius: 20px;">
+                                           <div class="card-body">
+                                                <h4 class="card-title">
+                                                   <i class="fas fa-address-book mr-2"></i>
+                                                   <b>${courseA.name}</b>
+                                                </h4>                                           
+                                                <h6 class="card-text">
+                                                    ${courseA.code}>
+                                                </h6>                                           
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div> -->
+                                <!-- <div class="courseDisplay">
+                                    <div class= "row">
+                                        <button style="background-color:#BAE7AE">
+                                            <h2>Python</h2>
+                                            <h3>PHY 101</h3>
+                                            <span class="iconify" data-inline="false" data-icon="logos:python" style="font-size: 40px;"></span>
+                                        </button>
+                                        <button style="background-color:#C2D6F4">
+                                            <h2>JavaScript</h2>
+                                            <h3>JVS 101</h3>
+                                            <span class="iconify" data-inline="false" data-icon="logos:javascript" style="font-size: 40px;"></span>
+                                        </button>
+                                        <button style="background-color:#E980B8 ">
+                                            <h2>React</h2>
+                                            <h3>RCT 101</h3>
+                                            <span class="iconify" data-inline="false" data-icon="logos:react" style="font-size: 40px;"></span>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <h3 class="seeMoreCourses">See all courses ></h3>
+                                    </div>
+                                </div> -->
+                                <div>
+                                    <!-- <div> 
+                                        <hr class="underline">                       
+                                        <h4 class="task dashboardInfo">Upcoming Tasks</h4>                                                   
+                                    </div> -->
+                                    <div class='container'>
+                                    <!-- <div class="row"> -->
+                                        <!-- <div class="separator1"> -->
+                                            <div class= "row align-items-start upcomingToDoList">
+                                                <div class=" column" id="assignmentIcon">
+                                                    <!-- <i class="iconify" data-icon="emojione-monotone:letter-q" style="color: #ff0000;" data-height="20"></i> 
+                                                    <i class="iconify" data-icon="emojione-monotone:letter-a" style="color: #008000;" data-height="25"></i>
+                  -->
+                                                </div>
+                                                <div class= "column" id="assignmentTitle">
+                                                    <!-- <h5>Python Assignment</h5> -->
+                                                </div>
+                                                <div class="column" id="assignmentDueDate">
+                                                    <!-- <h6>Due on Tuesday</h6> -->
+                                                </div>
+                                                    <!-- <h6 class="teacherInfo topSpacing">Due on Tuesday</h6> -->
+                                                <!-- </div> -->
+ 
+                                                <!-- <div class="eachCourseToDoDetails statusIcon">
+                                                    <button class="statusButton">Done</button>
+                                                </div> -->
+                    
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+                                                            
+                                </div>
+                
+                            </div>            
+                        </div> 
+                        <!-- <div class=" rightAside column">
+                            <body onload="renderDate()">
+                                <div class ="wrapper">
+                                    <div class="calendar">
+                                        <div class="month">
+                                            <div class="prev" onclick="moveDate('prev')">
+                                                <span>&#10094;</span>
+                                            </div>
+                                            <div>
+                                                <h4 id="month"></h4>
+                                            </div>
+                                            <div class="next" onclick="moveDate('next')">
+                                                <span>&#10095;</span>
+                                            </div>
+                                        </div>                                            
+                                        <div class="weekdays">
+                                            <div>Sun</div>
+                                            <div>Mon</div>
+                                            <div>Tue</div>
+                                            <div>Wed</div>
+                                            <div>Thu</div>
+                                            <div>Fri</div>
+                                            <div>Sat</div>
+                                        </div>
+                                        <div class="days" onload="renderDate()"></div>               
+                                    </div>
+                                </div>
+                            </body>
+                            <br>
+                            <div class="legendImage">
+                                <div class="row">
+                                    <div class="column quizLegend1">
+                                        <button></button>
+                                    </div>
+                                    <div class="column quizLegend2">
+                                        <h5> Quizzes</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="legendImage2">
+                                <div class="row">
+                                    <div class="column assignmentLegend1">
+                                        <button></button>
+                                    </div>
+                                    <div class="column assignmentLegend2">
+                                        <h5>Assignments</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="upcomingTasks">
+                                <h4>Upcoming Tasks</h4>
+                            </div>
+                            <div class="upcomingTasksDetails">
+                                <button>Python Assignment</button>
+                            </div>
+                        </div> -->
+                </div>                 
+            </main>
+        </div>
+            
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+        <!-- <script src="assets/vendors/jquery/jquery.min.js"></script>
+        <script src="assets/vendors/popper.js/popper.min.js"></script>
+        <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script> -->
+        <script src="assets/javascript/navigation.js"></script>
+        <!-- <script defer src="assets/javascript/main_student.js"></script>
+        <script src="assets/javascript/firebase.js"></script> -->
+        <script defer src="assets/javascript/studentDashboard.js"></script>
+        <!-- <script src="assets/javascript/validateCourseRegistration.js"></script> -->
+
+    </body>
+</html>
